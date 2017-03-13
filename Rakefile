@@ -1,13 +1,13 @@
-require "bundler/gem_tasks"
+require 'rake/testtask'
 require 'rubocop/rake_task'
+require 'inch/rake'
 
-desc 'Spec all functionality of gem'
-task :spec do
-    system("rspec spec")
+task default: [:test, :rubocop, 'doc:suggest']
+
+Rake::TestTask.new do |t|
+  t.pattern = 'test/**/*_test.rb'
 end
-
-task default: [:spec, :rubocop, 'doc:suggest']
-task test: :spec
+task spec: :test
 
 desc 'Execute rubocop'
 RuboCop::RakeTask.new(:rubocop) do |t|
