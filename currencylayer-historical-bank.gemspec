@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'currencylayer-historical-bank'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.date = Time.now.utc.strftime('%Y-%m-%d')
   s.homepage = "http://github.com/IldusSadykov/#{s.name}"
   s.authors = ['Ildus Sadykov']

@@ -101,7 +101,7 @@ class Money
       #
       # @return [Numeric] rate.
       def get_rate(from_currency, to_currency, opts = {}) # rubocop:disable all
-        @historical_date = Date.parse(opts[:date]).strftime("%Y-%m-%d") if opts[:date]
+        @historical_date = Date.parse(opts[:date].to_s).strftime("%Y-%m-%d") if opts[:date]
         expire_rates!
         rate = super
         unless rate
