@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.1.2'
   s.rubygems_version = '2.2.2'
-  s.add_dependency 'money', '~> 6.6.1'
+  s.add_dependency 'money', '~> 6.13'
   s.add_dependency 'monetize', '~> 1.3'
   s.add_dependency 'json', '~> 1.7'
   s.add_development_dependency 'minitest', '~> 5.8'
